@@ -258,12 +258,7 @@ input[type=text]:hover {
 }
 
 
-.singin-or-singup-btns {
-    position: absolute;
-    padding-top: 50px;
-    margin-right: 30px;
-    right: 0;
-}
+
 
 .singup-btn{
     margin-right: 50px;
@@ -287,14 +282,14 @@ input[type=text]:hover {
     display: inline-block;
     width: auto;
 }
-
+/*
 .singin-loading-spinner-container{
     outline: none;
     background-color: blueviolet;
     border: none;
     color: cornsilk;
     padding: 10px 44px;
-    display: none;
+    display: block;
     border-radius: 2px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -310,5 +305,41 @@ input[type=text]:hover {
     animation: spin 2s linear infinite;
     top: 5px;
     right: 39px;
-    
+
+}
+
+@keyframes spin {
+    0% {
+        transform :rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+.singin-btn{
+
+    outline: none;
+    background-color: rgba(18, 139, 3, 0.589);
+    border: none;
+    color: cornsilk;
+    padding: 10px 44px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+    font-weight: lighter;
+    font-size: 13px;
+
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+}
+
+.singin-btn:hover{
+    background-color: rgb(12, 16, 19);
+    color: rgb(240, 247, 240);
+
 }
