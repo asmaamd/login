@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+</head>   
+
+
+<body>
+<div id="login-title-bar">
+    <div id="login-title"> Login </div>
+    <div class = "login-title-bar-btns">
+        <div id="login-minm-btn" class = "login-minm-btn">-</div>
+        <div id="login-close-btn" class = "login-close-btn">X</div>
+    </div>
+</div>
+
+
+<div class = "login-loading-mask-wrapper" id = "login-loading-mask-wrapper">
+    <div class = "login-content-wrapper">
+        <div class= "login-main-logo"></div>
+        <h2 class = "login-main-logo-title">ROYAUME DU MAROC</h2>
+        <h2></h2>
+        
+        <div class="login-input-group">
+            <label class="login-show-error" id="login-show-error">Enter Your Name & Password </label>
+
+            <div class= "login-input-icon-username login-input-icon-username-bg">
+                <input type="text" placeholder="username" id="login-username">
+                <icon class="fa fa-user fa-lg fa-fw" aria-hidden="true"></icon>
+            </div>
+
+            <div class= "login-input-icon-password login-input-icon-password-bg">
+                <input type="text" placeholder="password" id="logi-password">
+                <icon class="fa fa-shield fa-lg fa-fw" aria-hidden="true"></icon>
+                <iconEye id="login-toggle-password" class="fa fa-fw fa-eye-slash login-hide-show-password-icon">
+                </iconEye>
+            </div>
+
+            <div class ="login-forgot-password">
+                <h2 class = "forgotLoginPassword" id="forgotLoginPassword">Forgot Password ?</h2>
+            </div>
+
+            <div class = "singin-or-singup-btns">
+                <button class="singup-btn" id="singup-btn">new user</button>
+                <div class="singin-btn-with-loading-group">
+
+                    <button class ="singin-btn" id="singin-btn">Singin</button>
+                    <button class ="singin-loading-spinner-container" id="singin-loading-spinner-container">
+                        <div class="singin-loading-spinner"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+   
+</body>
+</html>
