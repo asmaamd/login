@@ -17,7 +17,7 @@ con.connect(function(err) {
       });*/
     con.query("SELECT password FROM user WHERE name='asmaa'", function(err, result, fields) {
         if (err) throw err;
-        console.log(result);
+        console.log(result[0].password);
     });
 
 
