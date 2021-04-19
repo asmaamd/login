@@ -64,8 +64,8 @@ document.getElementById('singin-btn').addEventListener('click', () => {
 
 
 
-/*
-document.getElementById(login - toggle - password).addEventListener('click', () => {
+
+document.getElementById("login-toggle-password").addEventListener('click', () => {
     if (document.getElementById('login-password').type === "password") {
         document.getElementById('login-password').type = "text"
         document.getElementById(login - toggle - password).classList.remove('fa-eye-slash')
@@ -81,7 +81,7 @@ document.getElementById(login - toggle - password).addEventListener('click', () 
     }
 })
 
-*/
+
 
 /*
 document.getElementById('singin-btn').addEventListener('click',() =>{
