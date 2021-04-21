@@ -1,12 +1,15 @@
 const { remote } = require('electron')
-var mysql = require('mysql');
+const electron = require('electron');
+const ipcMain = electron.ipcMain;
+//const ipcMain = electron.ipcMain;
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: 'database'
-});
+
+//const { PythonShell } = require('python-shell');
+
+//let pyshell = new PythonShell('script.py');
+
+
+
 
 document.getElementById('login-minm-btn').addEventListener('click', () => {
     remote.getCurrentWindow().minimize()
@@ -15,54 +18,27 @@ document.getElementById('login-minm-btn').addEventListener('click', () => {
 document.getElementById('login-close-btn').addEventListener('click', () => {
     remote.app.quit()
 })
-document.getElementById('singup-btn').addEventListener('click', () => {
-    remote.app.quit()
-})
+
 
 document.getElementById('singin-btn').addEventListener('click', () => {
     //  document.getElementById("login-show-error").innerHTML = "login success"
     var rq = require('request-promise')
     var get_username = document.getElementById("login-username").value
-    var get_password = document.getElementById("login-password").value
+    var g_pass = document.getElementById("login-password").value
+        //  const crypto = require('crypto'),
+        //console.log(get_username);
+        //  let WIN = localStorage.getItem("test");
+        //    get_password = crypto.createHash('sha256').update(g_pass).digest('hex');
+        // ipcMain.send('asynchronous-message', "get_username");
+        // WIN.webContents.send('asynchronous-message', { 'SAVED': 'File Saved' });
+        // ipcMain.send('asynchronous-message', g_pass);
 
 
-    con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO user (name, password) VALUES ('x', 'oui')";
-        /*  con.query(sql, function(err, result) {
-              if (err) throw err;
-              console.log("1 record inserted");
-          });*/
-        con.query("SELECT password FROM user WHERE name='" + get_username + "'", function(err, result, fields) {
-            if (err) throw err;
-            //console.log(result);
-            if (result[0].password === get_password) {
-                document.getElementById("login-show-error").innerHTML = "login success"
-            } else {
-                document.getElementById("login-show-error").innerHTML = "Tricheur"
 
-            }
-        });
-
-
-    });
-
-    /*
-        rq(options).then(function(body) {
-            if (body == "login success") {
-
-                document.getElementById("login-show-error").innerHTML = "login success"
-            } else {
-                document.getElementById("login-show-error").innerHTML = "Username or password Inccorect"
-            }
-        }).catch(function(err) {
-
-        })
-    */
 })
 
 
+/*
 
 
 document.getElementById("login-toggle-password").addEventListener('click', () => {
@@ -79,29 +55,4 @@ document.getElementById("login-toggle-password").addEventListener('click', () =>
 
 
     }
-})
-
-
-
-/*
-document.getElementById('singin-btn').addEventListener('click',() =>{
-    document.getElementById("login-show-error").innerHTML = "login success"
-    var rq = require('request-promise')
-    var get_username = document.getElementById("login-username").value
-    var get_password = document.getElementById("login-password").value
-
-    
-    rq(options).then(function(body){
-        if(body =="login success"){
-
-            document.getElementById("login-show-error").innerHTML = "login success"
-        }else{
-            document.getElementById("login-show-error").innerHTML = "Username or password Inccorect"
-        }
-    }).catch(function(err){
-
-    })
-
-})
-
-*/
+})*/
